@@ -1,0 +1,283 @@
+//Note Affectation
+// == === <= >= != += -=
+// Poste incrémentation A++ Près incrémentation ++A
+// Post décrémentation A-- Près décrémentation --A
+// nb1 = 1
+Nb2 = Nb1++
+
+class MainApp
+{
+      public static void main(String[] args)
+      {
+          int value = 250;
+
+          if (value < 0 )
+          {
+            System.out.println("Value < 0");
+          }
+          else if(value > 100)
+          {
+            System.out.println("value > 100");
+          }
+          else
+          {
+            System.out.println(value);
+          }
+
+      }
+
+_______________________________________________________________________
+
+class MainApp
+{
+      public static void main(String[] args)
+      {
+          int option = 35;
+
+          switch(option)
+          {
+            case 1: // Option == 1
+                System.out.println("Option 1");
+                break;
+            case 2:
+                System.out.println("Option 2");
+                break;
+            case 3:
+                System.out.println("Option 3");
+                break;
+            default:
+              System.out.println(option);
+              break;
+
+
+
+          }
+
+      }
+
+
+}
+
+_____________________________________________________________________________________________
+
+public static void main(String[] args)
+      {
+          String choice = "y";
+
+          switch(choice)
+          {
+            case "y": // Option == 1
+                System.out.println("Oui");
+                break;
+            case "n":
+                System.out.println("NON");
+                break;
+            case "m":
+                System.out.println("FAUT VOIR AVEC MARCEL");
+                break;
+            default:
+              System.out.println("Ni Oui Ni Non");
+              break;
+
+
+________________________________________________________________________________________________
+
+public static void main(String[] args)
+      {
+        int i = 0;
+        while (i != 10)
+        {
+          i++;
+          if (i == 5)
+              continue;
+
+          System.out.println(i);
+
+        }
+}
+
+
+__________________________________________________________________
+
+public static void main(String[] args)
+      {
+        int i = 0;
+
+        do
+        {
+          i++;
+          if (i == 5)
+              continue;
+
+          System.out.println(i);
+
+        }
+        while (i != 10);
+
+int i;
+for (i = 0; i != 10; i++)
+        {
+          System.out.println(i);
+
+        }
+
+
+  public static int prog(String[] msg)
+  {
+
+    boolean info = true;
+
+    if(info)
+        return 1;
+    else
+        return 0;
+
+
+
+  }
+
+
+  public static void main(String[] args)
+  {
+    System.out.println("Coucou on fait des tests !!");
+
+    say("Hello !!");
+
+
+
+
+  }
+  public static String say(String msg)
+  {
+
+    System.out.println(msg);
+    return msg;
+  }
+
+
+------------------------------------------------------------------------
+
+
+public class Src
+{
+  public Src(int expiration)
+  {
+    this.mExpiration = expiration;
+    System.out.println("Validation d'un produit" + " : " + this.mExpiration);
+
+
+
+  }
+
+  public int getExpiration()
+  {
+
+
+    return this.mExpiration;
+  }
+
+  public void setExpiration(int expiration)
+  {
+    return;
+  }
+
+  int mExpiration;
+  private String mAuthor;
+
+// get : accées d'un attribut
+// set : modification d'un attribut
+}
+
+
+class App
+{
+  public static void main(String[] args)
+  {
+    Src sr = new Src(2020);
+    sr.mExpiration = 2056;
+    System.out.println(sr.mExpiration);
+
+
+
+
+  }
+
+}
+
+---------------------------------------------------------------------
+
+public class Src
+{
+  public Src(int expiration)
+  {
+    if (mNumberID > 0)
+    {
+
+      this.mExpiration = expiration;
+      mNumberID--;
+      System.out.println("Logiciel valide"  + this.mExpiration);
+      System.out.println("Logiciel enregistrement"  + this.mNumberID);
+
+    }
+    else
+    {
+      System.out.println("Error System");
+      return;
+    }
+
+
+
+  }
+
+  public int getExpiration()
+  {
+
+
+    return this.mExpiration;
+  }
+  public static int getNumber()
+  {
+
+    return mNumberID;
+  }
+
+  int mExpiration;
+  private String mAuthor;
+  private static int mNumberID = 5;
+
+// get : accées d'un attribut
+// set : modification d'un attribut
+}
+
+---------------------------------------------------------------------------
+
+class App
+{
+  public static void main(String[] args)
+  {
+    Src sr = new Src(2020);
+    Src sr2 = new Src(2022);
+    sr.mExpiration = 2056;
+    System.out.println(sr.mExpiration);
+    System.out.println(sr.getExpiration());
+    System.out.println("enregistrement" + Src.getNumber());
+    System.out.println(sr2.getExpiration());
+    System.out.println("enregistrement" + Src.getNumber());
+
+
+
+  }
+
+}
+
+------------------------------------------------------------------------
+
+int[][] tab = {{1,2,3}, {4,5,6}};
+
+
+    for(int[] i: tab)
+        for(int number : i)
+        System.out.println(number);
+
+
+
